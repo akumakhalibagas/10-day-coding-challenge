@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Walkthrough screen</string>
+    <string name="title">Learn</string>
+    <string name="onboard1_title">Learn</string>
+    <string name="onboard2_title">Code</string>
+    <string name="onboard3_title">Collect</string>
+</resources>
