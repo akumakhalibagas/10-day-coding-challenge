@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:overScrollMode="never"
+        android:scrollbarThumbVertical="@null">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500">
+
+            <ImageView
+                android:id="@+id/background"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.70"
+                android:src="@drawable/bgwelcome"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/app_name"/>
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/logo"
+                app:layout_constraintHeight_percent="0.60"
+                app:layout_constraintStart_toStartOf="@id/background"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:contentDescription="@string/app_name"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bt_signup"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/bggradient"
+                app:backgroundTint="@null"
+                app:cornerRadius="@dimen/_24sdp"
+                android:foreground="?android:selectableItemBackground"
+                app:layout_constraintStart_toStartOf="@id/background"
+                app:layout_constraintEnd_toEndOf="@id/background"
+                app:layout_constraintTop_toBottomOf="@id/background"
+                android:text="Sign Up"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textAllCaps="false"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bt_signin"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:foreground="?android:selectableItemBackground"
+                android:background="@drawable/bgwhite"
+                app:cornerRadius="@dimen/_24sdp"
+                app:backgroundTint="@null"
+                app:layout_constraintStart_toStartOf="@id/bt_signup"
+                app:layout_constraintEnd_toEndOf="@id/bt_signup"
+                app:layout_constraintTop_toBottomOf="@id/bt_signup"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Login"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textAllCaps="false"/>
+
+            <TextView
+                android:id="@+id/tv_forgot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/bt_signin"
+                app:layout_constraintEnd_toEndOf="@id/bt_signin"
+                app:layout_constraintTop_toBottomOf="@id/bt_signin"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_forgot"
+                android:src="@drawable/sosmed"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_40sdp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

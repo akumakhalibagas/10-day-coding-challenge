@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple_500">
+
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.55"
+            android:src="@drawable/bglogin"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/app_name"/>
+
+        <ImageView
+            android:layout_width="@dimen/_34sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="@dimen/_20sdp"
+            android:id="@+id/bt_back"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.65"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingHorizontal="@dimen/_30sdp"
+            android:background="@drawable/bg">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <TextView
+                    android:id="@+id/tv_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:text="Log in"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Email"
+                    android:textColor="#3F0108"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_login"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="@dimen/_20sdp"/>
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@drawable/bgedittext"
+                    app:layout_constraintTop_toBottomOf="@id/tv_email"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="#3F0108"
+                    android:hint="makhalibagas@yahoo.com"
+                    android:inputType="text"
+                    android:textSize="15sp"
+                    android:textColorHint="#3F0108"
+                    android:drawableStart="@drawable/mail"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:paddingHorizontal="@dimen/_12sdp"/>
+
+                <TextView
+                    android:id="@+id/tv_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Password"
+                    android:textColor="#3F0108"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/et_email"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="@dimen/_16sdp"/>
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@drawable/bgedittext"
+                    app:layout_constraintTop_toBottomOf="@id/tv_password"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="#3F0108"
+                    android:textColorHint="#3F0108"
+                    android:inputType="textPassword"
+                    android:hint="*********"
+                    android:drawableStart="@drawable/key"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:paddingHorizontal="@dimen/_12sdp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login"
+                    app:backgroundTint="@null"
+                    style="?android:selectableItemBackground"
+                    android:foreground="?android:selectableItemBackground"
+                    app:layout_constraintTop_toBottomOf="@id/et_password"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:id="@+id/bt_login"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
