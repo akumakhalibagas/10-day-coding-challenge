@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_500"
+    tools:context=".SignupActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_30sdp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/apple"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/apple"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="36sp"
+            android:text="Sign Up"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sfpro"
+            app:layout_constraintTop_toBottomOf="@id/apple"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:id="@+id/tv_signup"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account?"
+            android:textSize="18sp"
+            android:layout_marginTop="@dimen/_6sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_signup"
+            android:textColor="@color/teal_700"
+            android:fontFamily="@font/sfreg"
+            android:id="@+id/tv_already"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign in"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_already"
+            android:textColor="@color/teal_200"
+            android:fontFamily="@font/sfpro"
+            android:id="@+id/tv_signin"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Name"
+            android:textSize="14sp"
+            android:textColor="@color/teal_700"
+            android:fontFamily="@font/sfreg"
+            android:layout_marginTop="@dimen/_30sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_signin"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/bgedittext"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:drawableStart="@drawable/ic_account"
+            android:drawablePadding="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:hint="Bagas Makhali"
+            android:textColor="@color/teal_700"
+            android:inputType="text"
+            android:textColorHint="@color/teal_700"
+            android:textSize="16sp"
+            android:id="@+id/et_name"/>
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Email"
+            android:textSize="14sp"
+            android:textColor="@color/teal_700"
+            android:fontFamily="@font/sfreg"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_name"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/bgedittext"
+            app:layout_constraintTop_toBottomOf="@id/tv_email"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:textColor="@color/teal_700"
+            android:hint="makhalibagas@yahoo.con"
+            android:textColorHint="@color/teal_700"
+            android:inputType="textEmailAddress"
+            android:textSize="16sp"
+            android:id="@+id/et_email"/>
+
+        <TextView
+            android:id="@+id/tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Password"
+            android:textSize="14sp"
+            android:textColor="@color/teal_700"
+            android:fontFamily="@font/sfreg"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_email"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/bgedittext"
+            app:layout_constraintTop_toBottomOf="@id/tv_password"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:drawableStart="@drawable/ic_key"
+            android:textColor="@color/teal_700"
+            android:drawableEnd="@drawable/ic_mata"
+            android:drawablePadding="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:hint="********"
+            android:textColorHint="@color/teal_700"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            android:id="@+id/et_password"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_password"
+            android:background="@drawable/signup"
+            app:backgroundTint="@null"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:id="@+id/bt_signup"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_signup"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_30sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Follow us"
+                android:textSize="12sp"
+                android:textColor="@color/teal_700"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                app:backgroundTint="@null"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:background="@drawable/ic_ig"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                app:backgroundTint="@null"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:background="@drawable/ic_fb"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                app:backgroundTint="@null"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:background="@drawable/ic_tw"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
