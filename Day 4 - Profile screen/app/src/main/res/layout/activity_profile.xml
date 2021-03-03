@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_500"
+    tools:context=".ProfileActivity">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:background="@drawable/ic_back"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/_20sdp"
+        android:id="@+id/bt_back"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/bgprofile"
+        android:id="@+id/background"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.74"
+        android:background="@drawable/bgwhite"
+        android:paddingHorizontal="@dimen/_30sdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Bagas Makhali"
+            android:textSize="20sp"
+            android:fontFamily="@font/sfpro"
+            android:textColor="#683B0D"
+            android:layout_marginTop="@dimen/_75sdp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_15sdp">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                app:backgroundTint="@null"
+                android:background="@drawable/ic_email"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                app:backgroundTint="@null"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/ic_phone"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                app:backgroundTint="@null"
+                android:background="@drawable/ic_twitter"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About You"
+            android:textSize="16sp"
+            android:fontFamily="@font/sfpro"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textColor="@color/teal_700"/>
+
+        <TextView
+            tools:ignore="MissingPrefix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about"
+            android:fontFamily="@font/sfreg"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:lineSpacingExtra="@dimen/_3sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upcoming events"
+            android:textSize="16sp"
+            android:fontFamily="@font/sfpro"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:textColor="@color/teal_700"/>
+
+
+        <include layout="@layout/items_event"/>
+        <include layout="@layout/items_event"/>
+        <include layout="@layout/items_event"/>
+
+
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/pp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.60"
+        android:id="@+id/circle_image"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
