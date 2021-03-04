@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MessagingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:paddingHorizontal="@dimen/_24sdp"
+        android:paddingVertical="@dimen/_6sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="10dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_back"
+                app:backgroundTint="@null"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/bt_back"/>
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/pp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/photo_profile"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bagas Makhali"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/photo_profile"
+                android:fontFamily="@font/sfpro"
+                android:textSize="12sp"
+                android:id="@+id/tv_name"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_phone"
+                app:backgroundTint="@null"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.85"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/shape_green">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bgmain"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/app_name"
+            android:id="@+id/background"/>
+
+        <!-- hanya tampilan saja -->
+        <LinearLayout
+            android:id="@+id/receiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="@id/background"
+            app:layout_constraintStart_toStartOf="@id/background"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:background="@drawable/shape_receiver">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#364A2B"
+                android:text="Hi Anna, is the logo done?"
+                android:fontFamily="@font/sfreg"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22:20"
+                android:fontFamily="@font/sfpro"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:textSize="12sp"
+                android:layout_gravity="end"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/receiver"
+            app:layout_constraintEnd_toEndOf="@id/background"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:background="@drawable/shape_sender">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#364A2B"
+                android:text="Yes, I’ve sent an email with the\nadjustments"
+                android:fontFamily="@font/sfreg"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="end"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="22:20"
+                    android:fontFamily="@font/sfpro"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_read"
+                    android:layout_marginStart="@dimen/_3sdp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_75sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_16sdp"
+        android:background="@color/white">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/ic_camera"
+            app:backgroundTint="@null"
+            android:id="@+id/bt_camera"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/emot"
+            app:layout_constraintStart_toStartOf="@id/et_chats"
+            app:layout_constraintTop_toTopOf="@id/et_chats"
+            app:layout_constraintBottom_toBottomOf="@id/et_chats"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:id="@+id/bt_emot"
+            android:contentDescription="@string/app_name"/>
+
+        <EditText
+            android:id="@+id/et_chats"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_height="@dimen/_40sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingHorizontal="@dimen/_50sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/bt_camera"
+            app:layout_constraintEnd_toStartOf="@id/bt_vn"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:drawablePadding="@dimen/_16sdp"
+            android:background="@drawable/shape_et"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintTop_toTopOf="@id/et_chats"
+            app:layout_constraintBottom_toBottomOf="@id/et_chats"
+            app:layout_constraintEnd_toEndOf="@id/et_chats"
+            android:background="@drawable/ic_send"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:backgroundTint="@null"
+            android:id="@+id/bt_send"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/ic_vn"
+            app:backgroundTint="@null"
+            android:id="@+id/bt_vn"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
