@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="@dimen/_12sdp">
+
+
+    <ImageView
+        android:id="@+id/image_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/items"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Dealing with imposter\nsyndrome"
+        android:fontFamily="@font/sfbold"
+        android:textColor="#452E4F"
+        app:layout_constraintTop_toBottomOf="@id/image_items"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:id="@+id/tv_title"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alan_moore"
+        android:textColor="#452E4F"
+        android:drawableStart="@drawable/ic_author"
+        android:drawablePadding="@dimen/_3sdp"
+        android:fontFamily="@font/sfmed"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:id="@+id/tv_author"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_5_comment"
+        android:textColor="#452E4F"
+        android:drawableStart="@drawable/ic_comment"
+        android:drawablePadding="@dimen/_3sdp"
+        android:fontFamily="@font/sfmed"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:id="@+id/tv_comment"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

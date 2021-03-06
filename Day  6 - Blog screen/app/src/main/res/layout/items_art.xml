@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00A8D4"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_12sdp">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/itemsart"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/image_items"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/morder_art"
+        android:textSize="12sp"
+        android:textColor="#FFDE33"
+        android:fontFamily="@font/sfbold"
+        app:layout_constraintStart_toEndOf="@id/image_items"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:id="@+id/tv_title"/>
+
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sfbold"
+        app:layout_constraintStart_toEndOf="@id/image_items"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textSize="16sp"
+        android:text="About the new art deco\nfor designers and artists"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alan_moore"
+        android:textColor="#FFFFFF"
+        android:drawableStart="@drawable/ic_author"
+        android:drawablePadding="@dimen/_3sdp"
+        android:fontFamily="@font/sfmed"
+        app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
+        app:layout_constraintStart_toEndOf="@id/image_items"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:id="@+id/tv_author"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_5_comment"
+        android:textColor="#FFFFFF"
+        android:drawableStart="@drawable/ic_comment"
+        android:drawablePadding="@dimen/_3sdp"
+        android:fontFamily="@font/sfmed"
+        app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:id="@+id/tv_comment"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
