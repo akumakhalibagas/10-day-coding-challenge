@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chat_svg"
+            app:layout_constraintStart_toStartOf="@id/image_illus"
+            app:layout_constraintTop_toTopOf="@id/image_illus"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:id="@+id/image_chats"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.50"
+            android:src="@drawable/illus"
+            android:scaleType="fitXY"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/image_illus"/>
+
+        <ImageView
+            android:id="@+id/image_reach"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.50"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:src="@drawable/reach_svg"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_26sdp"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#BDBDBD"
+            android:fontFamily="@font/opensans"
+            android:text="@string/new_achievement"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toBottomOf="@id/image_reach"
+            app:layout_constraintStart_toStartOf="@id/image_reach"
+            app:layout_constraintEnd_toEndOf="@id/image_reach"
+            android:textSize="10sp"
+            android:id="@+id/tv_achievement"/>
+
+        <TextView
+            android:id="@+id/tv_social"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#6FCF97"
+            android:textSize="18sp"
+            android:fontFamily="@font/opensans"
+            android:text="@string/social_star"
+            app:layout_constraintStart_toStartOf="@id/tv_achievement"
+            app:layout_constraintEnd_toEndOf="@id/tv_achievement"
+            app:layout_constraintTop_toBottomOf="@id/tv_achievement"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_6sdp"
+            android:background="#F5F4F4"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_social"
+            android:id="@+id/view"/>
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view"
+            android:layout_marginTop="@dimen/_24sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/key_metrics"
+                android:fontFamily="@font/montserrat_reg"
+                android:textColor="#4F3A57"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#4F3A57"
+                android:text="@string/this_week"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_marginStart="@dimen/_3sdp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_22sdp"
+            android:paddingHorizontal="@dimen/_6sdp"
+            app:layout_constraintTop_toBottomOf="@id/linear">
+
+            <com.loopeer.shadow.ShadowView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                app:cornerRadius="@dimen/_15sdp"
+                style="?android:selectableItemBackground"
+                app:shadowMarginLeft="@dimen/_12sdp"
+                app:shadowMarginTop="@dimen/_6sdp"
+                app:shadowMarginBottom="@dimen/_6sdp"
+                app:shadowMarginRight="@dimen/_3sdp"
+                app:shadowRadius="@dimen/_12sdp"
+                app:shadowColor="#f9f0f3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/ic_visits"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/visits_svg"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_marginStart="@dimen/_12sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/visits"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/opensans"
+                        android:textSize="12sp"
+                        android:textColor="#BDBDBD"
+                        app:layout_constraintStart_toEndOf="@id/ic_visits"
+                        app:layout_constraintTop_toTopOf="@id/ic_visits"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:id="@+id/tv_visits"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_4_324"
+                        android:textColor="#4F3A57"
+                        android:textSize="24sp"
+                        android:fontFamily="@font/opensans"
+                        app:layout_constraintStart_toEndOf="@id/ic_visits"
+                        app:layout_constraintTop_toBottomOf="@id/tv_visits"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:id="@+id/tv_visits_value"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.loopeer.shadow.ShadowView>
+            <com.loopeer.shadow.ShadowView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                style="?android:selectableItemBackground"
+                app:cornerRadius="@dimen/_15sdp"
+                app:shadowMarginLeft="@dimen/_3sdp"
+                app:shadowMarginTop="@dimen/_6sdp"
+                app:shadowMarginBottom="@dimen/_6sdp"
+                app:shadowMarginRight="@dimen/_12sdp"
+                app:shadowRadius="@dimen/_15sdp"
+                app:shadowColor="#f9f0f3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/ic_likes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/likes_svg"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_marginStart="@dimen/_12sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/likes"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/opensans"
+                        android:textSize="12sp"
+                        android:textColor="#BDBDBD"
+                        app:layout_constraintStart_toEndOf="@id/ic_likes"
+                        app:layout_constraintTop_toTopOf="@id/ic_likes"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:id="@+id/tv_likes"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_654"
+                        android:textColor="#4F3A57"
+                        android:textSize="24sp"
+                        android:fontFamily="@font/opensans"
+                        app:layout_constraintStart_toEndOf="@id/ic_likes"
+                        app:layout_constraintTop_toBottomOf="@id/tv_likes"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:id="@+id/tv_likes_value"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.loopeer.shadow.ShadowView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_6sdp"
+            app:layout_constraintTop_toBottomOf="@id/menu1">
+
+            <com.loopeer.shadow.ShadowView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                style="?android:selectableItemBackground"
+                app:cornerRadius="@dimen/_15sdp"
+                app:shadowMarginLeft="@dimen/_12sdp"
+                app:shadowMarginTop="@dimen/_3sdp"
+                app:shadowMarginBottom="@dimen/_6sdp"
+                app:shadowMarginRight="@dimen/_3sdp"
+                app:shadowRadius="@dimen/_15sdp"
+                app:shadowColor="#f9f0f3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/ic_favorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/favorite_svg"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_marginStart="@dimen/_12sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/favorite"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/opensans"
+                        android:textSize="12sp"
+                        android:textColor="#BDBDBD"
+                        app:layout_constraintStart_toEndOf="@id/ic_favorite"
+                        app:layout_constraintTop_toTopOf="@id/ic_favorite"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:id="@+id/tv_favorite"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_855"
+                        android:textColor="#4F3A57"
+                        android:textSize="24sp"
+                        android:fontFamily="@font/opensans"
+                        app:layout_constraintStart_toEndOf="@id/ic_favorite"
+                        app:layout_constraintTop_toBottomOf="@id/tv_favorite"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:id="@+id/tv_favorite_value"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.loopeer.shadow.ShadowView>
+            <com.loopeer.shadow.ShadowView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                style="?android:selectableItemBackground"
+                app:cornerRadius="@dimen/_15sdp"
+                app:shadowMarginLeft="@dimen/_3sdp"
+                app:shadowMarginTop="@dimen/_3sdp"
+                app:shadowMarginBottom="@dimen/_6sdp"
+                app:shadowMarginRight="@dimen/_12sdp"
+                app:shadowRadius="@dimen/_100sdp"
+                app:shadowColor="#f9f0f3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/ic_views"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/views_svg"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_marginStart="@dimen/_12sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/likes"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/opensans"
+                        android:textSize="12sp"
+                        android:textColor="#BDBDBD"
+                        app:layout_constraintStart_toEndOf="@id/ic_views"
+                        app:layout_constraintTop_toTopOf="@id/ic_views"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:id="@+id/tv_views"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_5_436"
+                        android:textColor="#4F3A57"
+                        android:textSize="24sp"
+                        android:fontFamily="@font/opensans"
+                        app:layout_constraintStart_toEndOf="@id/ic_views"
+                        app:layout_constraintTop_toBottomOf="@id/tv_views"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:id="@+id/tv_views_value"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.loopeer.shadow.ShadowView>
+        </LinearLayout>
+
+        <com.loopeer.shadow.ShadowView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/menu2"
+            app:shadowRadius="@dimen/_12sdp"
+            app:shadowMarginLeft="@dimen/_8sdp"
+            app:shadowMarginRight="@dimen/_8sdp"
+            app:shadowMarginBottom="@dimen/_12sdp"
+            app:cornerRadius="@dimen/_15sdp"
+            app:shadowColor="#f9f0f3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/_16sdp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/legends"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/analisis_user_svg"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </LinearLayout>
+        </com.loopeer.shadow.ShadowView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="new_achievement">new achievement</string>
+    <string name="social_star">Social Star</string>
+    <string name="key_metrics">Key metrics</string>
+    <string name="this_week">this week</string>
+    <string name="visits">visits</string>
+    <string name="_4_324">4,324</string>
+    <string name="_654">654</string>
+    <string name="favorite">favorite</string>
+    <string name="_855">855</string>
+    <string name="likes">likes</string>
+    <string name="_5_436">5,436</string>
+</resources>
