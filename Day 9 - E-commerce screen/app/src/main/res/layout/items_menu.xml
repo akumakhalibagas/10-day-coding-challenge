@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <com.loopeer.shadow.ShadowView
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        app:shadowMargin="@dimen/_10sdp"
+        android:background="@color/white"
+        app:shadowColor="#f6f4f4"
+        app:cornerRadius="@dimen/_15sdp"
+        app:shadowRadius="@dimen/_100sdp">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cakes"
+            app:layout_gravity="center"/>
+
+    </com.loopeer.shadow.ShadowView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="Cakes"
+        android:fontFamily="@font/osb"
+        android:textColor="#1D216E"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

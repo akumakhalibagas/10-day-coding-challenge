@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.loopeer.shadow.ShadowView
+            android:id="@+id/shadow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cornerRadius="@dimen/_12sdp"
+            app:shadowRadius="@dimen/_100sdp"
+            app:shadowMargin="@dimen/_20sdp"
+            app:shadowColor="#f6f4f4"
+            android:background="@color/white">
+
+            <SearchView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:iconifiedByDefault="false"
+                android:searchIcon="@drawable/sv_svg"
+                android:queryBackground="@null"
+                android:queryHint="Search..."
+                android:background="@color/white"/>
+        </com.loopeer.shadow.ShadowView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cart_svg"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:layout_constraintTop_toTopOf="@id/shadow"
+            app:layout_constraintBottom_toBottomOf="@id/shadow"
+            android:id="@+id/image_cart"/>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_175sdp"
+            android:src="@drawable/promo_svg"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@id/shadow"
+            android:id="@+id/image_promo"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/drink2"
+            app:layout_constraintTop_toTopOf="@id/image_promo"
+            app:layout_constraintEnd_toEndOf="@id/image_promo"
+            android:id="@+id/drink2"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/drink1"
+            app:layout_constraintTop_toTopOf="@id/image_promo"
+            app:layout_constraintEnd_toStartOf="@id/drink2"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:id="@+id/drink1"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textColor="#151A6A"
+            android:text="Delicious dopamine"
+            android:fontFamily="@font/osl"
+            app:layout_constraintTop_toBottomOf="@id/image_promo"
+            android:layout_marginStart="@dimen/_20sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/tv_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="see all"
+            android:textAllCaps="true"
+            android:textColor="#151A6A"
+            android:fontFamily="@font/osb"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            app:layout_constraintTop_toBottomOf="@id/image_promo"
+            android:id="@+id/tv_seeall"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="4"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            tools:listitem="@layout/items_food"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textColor="#151A6A"
+            android:text="Top goodies"
+            android:fontFamily="@font/osl"
+            app:layout_constraintTop_toBottomOf="@id/rv_food"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/tv_title1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="see all"
+            android:textAllCaps="true"
+            android:textColor="#151A6A"
+            android:fontFamily="@font/osb"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_26sdp"
+            app:layout_constraintTop_toBottomOf="@id/rv_food"
+            android:id="@+id/tv_seeall1"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:paddingHorizontal="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_title1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white">
+
+                    <com.loopeer.shadow.ShadowView
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        app:shadowMargin="@dimen/_10sdp"
+                        android:background="@color/white"
+                        app:shadowColor="#f6f4f4"
+                        app:cornerRadius="@dimen/_15sdp"
+                        app:shadowRadius="@dimen/_100sdp">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cakes"
+                            app:layout_gravity="center"/>
+
+                    </com.loopeer.shadow.ShadowView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="Cakes"
+                        android:fontFamily="@font/osb"
+                        android:textColor="#1D216E"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white">
+
+                    <com.loopeer.shadow.ShadowView
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        app:shadowMargin="@dimen/_10sdp"
+                        android:background="@color/white"
+                        app:shadowColor="#f6f4f4"
+                        app:cornerRadius="@dimen/_15sdp"
+                        app:shadowRadius="@dimen/_100sdp">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/candies"
+                            app:layout_gravity="center"/>
+
+                    </com.loopeer.shadow.ShadowView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="Candies"
+                        android:fontFamily="@font/osb"
+                        android:textColor="#1D216E"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white">
+
+                    <com.loopeer.shadow.ShadowView
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        app:shadowMargin="@dimen/_10sdp"
+                        android:background="@color/white"
+                        app:shadowColor="#f6f4f4"
+                        app:cornerRadius="@dimen/_15sdp"
+                        app:shadowRadius="@dimen/_100sdp">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/chocolate"
+                            app:layout_gravity="center"/>
+
+                    </com.loopeer.shadow.ShadowView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="Chocolate"
+                        android:fontFamily="@font/osb"
+                        android:textColor="#1D216E"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white">
+
+                    <com.loopeer.shadow.ShadowView
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        app:shadowMargin="@dimen/_10sdp"
+                        android:background="@color/white"
+                        app:shadowColor="#f6f4f4"
+                        app:cornerRadius="@dimen/_15sdp"
+                        app:shadowRadius="@dimen/_100sdp">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icecrem"
+                            app:layout_gravity="center"/>
+
+                    </com.loopeer.shadow.ShadowView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="Ice Cream"
+                        android:fontFamily="@font/osb"
+                        android:textColor="#1D216E"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
