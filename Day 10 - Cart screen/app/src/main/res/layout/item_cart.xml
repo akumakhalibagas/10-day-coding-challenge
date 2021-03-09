@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.loopeer.shadow.ShadowView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:shadowMarginLeft="@dimen/_20sdp"
+    app:shadowMarginRight="@dimen/_20sdp"
+    app:shadowMarginBottom="@dimen/_10sdp"
+    app:shadowMarginTop="@dimen/_10sdp"
+    app:shadowRadius="@dimen/_100sdp"
+    app:shadowColor="#f5ecf6"
+    app:cornerRadius="@dimen/_12sdp"
+    android:layout_marginTop="@dimen/_12sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lollipop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/image_food"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Roll Lollipop"
+            android:textSize="14sp"
+            android:fontFamily="@font/osb"
+            android:textColor="#424586"
+            app:layout_constraintStart_toEndOf="@id/image_food"
+            app:layout_constraintTop_toTopOf="@id/image_food"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"/>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            app:layout_constraintStart_toEndOf="@id/image_food"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:rating="4"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:id="@+id/rb"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#424586"
+            android:textSize="18sp"
+            android:text="$4"
+            android:fontFamily="@font/osb"
+            android:layout_marginTop="@dimen/_3sdp"
+            app:layout_constraintStart_toEndOf="@id/image_food"
+            app:layout_constraintTop_toBottomOf="@id/rb"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:id="@+id/tv_price"/>
+
+        <LinearLayout
+            android:id="@+id/linear_plusmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/ic_plus"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                app:backgroundTint="@null"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/ic_min"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textSize="24sp"
+            android:fontFamily="@font/osl"
+            android:textColor="#424586"
+            app:layout_constraintEnd_toStartOf="@id/linear_plusmin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="@dimen/_12sdp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.loopeer.shadow.ShadowView>
